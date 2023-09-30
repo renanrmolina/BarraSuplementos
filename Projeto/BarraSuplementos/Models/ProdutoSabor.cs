@@ -7,11 +7,15 @@ namespace BarraSuplementos.Models;
 public class ProdutoSabor
 {
     [Key, Column(Order = 1)]
+    
+    [Display(Name = "Produto")]
     public int ProdutoId { get; set; }
     [ForeignKey("ProdutoId")]
     public Produto Produto { get; set; }
 
     [Key, Column(Order = 2)]
+    
+    [Display(Name = "Sabor")]
     public int SaborId { get; set; }
     [ForeignKey("ProdutoId")]
     public Sabor Sabor { get; set; }

@@ -11,9 +11,12 @@ public class Carrinho
     
     public DateTime Data { get; set; }
 
-    // [Column(DataType("decimal(7,2)"))]
+    
+    [Column(TypeName = "decimal(8,2)")]
     public decimal Valor { get; set; }
 
+  
+    [Display(Name = "Cliente")]
     public int ClienteId { get; set; }
     [ForeignKey("ClienteId")]
     public Cliente Cliente { get; set; }

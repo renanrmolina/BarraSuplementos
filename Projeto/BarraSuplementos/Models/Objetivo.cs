@@ -12,4 +12,9 @@ public class Objetivo
     [Required(ErrorMessage = "Informe o nome do objetivo")]
     [StringLength(30, ErrorMessage = "O nome deve possuir no máximo 30 caracteres")]
     public string Nome { get; set; }
+
+    [Display(Name = "Descrição")]
+    [Required(ErrorMessage = "Informe a descrição do objetivo")]
+    [StringLength(1000, ErrorMessage = "A descrição deve possuir no máximo 1000 caracteres")]
+    public string Descricao { get; set; }
 }
