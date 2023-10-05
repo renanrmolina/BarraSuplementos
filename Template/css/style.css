@@ -283,7 +283,7 @@
 }
 
 .product-item small a:hover {
-    color: var(--primary) !important;
+    color: var(--secondary) !important;
 }
 
 
