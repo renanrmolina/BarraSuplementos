@@ -17,6 +17,6 @@ public class ProdutoSabor
     
     [Display(Name = "Sabor")]
     public int SaborId { get; set; }
-    [ForeignKey("ProdutoId")]
+    [ForeignKey("SaborId")]
     public Sabor Sabor { get; set; }
 }

@@ -16,6 +16,6 @@ public class ProdutoObjetivo
     
     [Display(Name = "Objetivo")]
     public int ObjetivoId { get; set; }
-    [ForeignKey("ProdutoId")]
+    [ForeignKey("ObjetivoId")]
     public Objetivo Objetivo { get; set; }
 }

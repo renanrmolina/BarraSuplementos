@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 
 namespace BarraSuplementos.Models;
 
@@ -7,19 +8,20 @@ namespace BarraSuplementos.Models;
 public class Usuario
 {
     [Key]
-    public int Id { get; set; }
+    public string UsuarioId { get; set; }
+    [ForeignKey("UsuarioId")]
+    public IdentityUser ContaUsuario { get; set; }
 
     [Required(ErrorMessage = "Informe o nome do usuário")]
     [StringLength(20, ErrorMessage = "O usuário deve possuir no máximo 20 caracteres")]
     public string Nome { get; set;}
 
-    [Required(ErrorMessage = "Informe a senha")]
-    [StringLength(8, ErrorMessage = "A senha deve possuir no máximo 8 caracteres")]
-    public string Senha { get; set;}
+    [DataType(DataType.Date)]
+    [Display(Name = "Data de Nascimento")]
+    [Required(ErrorMessage = "Informe a Data de Nascimento")]
+    public DateTime DataNascimento { get; set; }
 
-    
-    [Display(Name = "Email")]
-    [Required(ErrorMessage = "Informe o email do Usuário")]
-    [StringLength(60, ErrorMessage = "O email deve possuir no máximo 60 caracteres")]
-    public string Email { get; set;}
+    [StringLength(300)]
+    public string Foto { get; set; }
+
 }

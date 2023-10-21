@@ -6,6 +6,7 @@ namespace BarraSuplementos.Models;
 public class Produto
 {
     [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
 
     [Required(ErrorMessage = "Informe o nome do produto")]
@@ -23,7 +24,7 @@ public class Produto
     
     [Display(Name = "Quantidade em estoque")]
     [Required(ErrorMessage = "Informe a quantidade em estoque")]
-    public int QntdEstoque { get; set; }
+    public int QtdEstoque { get; set; }
 
     [Column(TypeName = "decimal(8,2)")]
     [Display(Name = "Valor atual")]
@@ -42,5 +43,9 @@ public class Produto
     public int CategoriaId { get; set; }
     [ForeignKey("CategoriaId")]
     public Categoria Categoria { get; set; }
+
+    public ICollection<CarrinhoProduto> Carrinhos { get; set; }
+    public ICollection<ProdutoObjetivo> Objetivos { get; set; }
+    public ICollection<ProdutoSabor> Sabores { get; set; }
 
 }

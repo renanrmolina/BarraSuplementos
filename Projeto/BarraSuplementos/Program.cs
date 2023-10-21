@@ -1,7 +1,22 @@
+using BarraSuplementos.Data;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Serviços de Conexão ou Contexto
+string conn = builder.Configuration.GetConnectionString("BarraSuplementosConn");
+builder.Services.AddDbContext<AppDbContext>(
+    options => options.UseMySql(conn, ServerVersion.AutoDetect(conn))
+);
+
+// Serviços de Identity
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddEntityFrameworkStores<AppDbContext>()
+    .AddDefaultTokenProviders();
 
 var app = builder.Build();
 
@@ -23,7 +38,6 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-    
 
 app.Run();
 
