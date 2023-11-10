@@ -44,6 +44,11 @@ public class Produto
     [ForeignKey("CategoriaId")]
     public Categoria Categoria { get; set; }
 
+    [Display(Name = "Marca")]
+    public int MarcaId { get; set; }
+    [ForeignKey("MarcaId")]
+    public Categoria Categoria { get; set; }
+
     public ICollection<CarrinhoProduto> Carrinhos { get; set; }
     public ICollection<ProdutoObjetivo> Objetivos { get; set; }
     public ICollection<ProdutoSabor> Sabores { get; set; }
