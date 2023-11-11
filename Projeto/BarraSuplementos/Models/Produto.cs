@@ -47,7 +47,7 @@ public class Produto
     [Display(Name = "Marca")]
     public int MarcaId { get; set; }
     [ForeignKey("MarcaId")]
-    public Categoria Categoria { get; set; }
+    public Marca Marca { get; set; }
 
     public ICollection<CarrinhoProduto> Carrinhos { get; set; }
     public ICollection<ProdutoObjetivo> Objetivos { get; set; }

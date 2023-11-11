@@ -15,7 +15,11 @@ public class Categoria
     public string Nome { get; set; }
 
     [Display(Name = "Descrição")]
-    [(ErrorMessage = "Informe a descrição da categoria")]
     [StringLength(1000, ErrorMessage = "A descrição deve possuir no máximo 1000 caracteres")]
     public string Descricao { get; set; }
+
+    public bool Destaque { get; set; } = false;
+
+    [StringLength(300)]
+    public string Imagem { get; set; }
 }

@@ -15,7 +15,6 @@ public class Marca
     public string Nome { get; set; }
 
     [Display(Name = "Descrição")]
-    [(ErrorMessage = "Informe a descrição da marca")]
     [StringLength(1000, ErrorMessage = "A descrição deve possuir no máximo 1000 caracteres")]
     public string Descricao { get; set; }
 }

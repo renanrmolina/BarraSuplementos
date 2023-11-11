@@ -1,9 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using CozaStore.Models;
+using BarraSuplementos.Models;
 
-
-namespace CozaStore.Data;
+namespace BarraSuplementos.Data;
 
 public class AppDbSeed
 {
@@ -17,7 +16,10 @@ public class AppDbSeed
             },
              new Categoria() {
                 Id = 2,
-                Nome = "Emagrecimento"
+                Nome = "Emagrecimento",
+                Descricao = "Os melhores suplementos para atingir seu objetivo de emagrecer.",
+                Imagem = "/img/emagrecerObjetivo_resized.jpg",
+                Destaque = true
             },
              new Categoria() {
                 Id = 3,
@@ -25,7 +27,10 @@ public class AppDbSeed
             },
              new Categoria() {
                 Id = 4,
-                Nome = "Massa Muscular"
+                Nome = "Massa Muscular",
+                Descricao = "Os melhores suplementos para atingir seu objetivo de ganho de massa.",
+                Imagem = "img/ganhoMassa_resized (1).jpg",
+                Destaque = true
             },
              new Categoria() {
                 Id = 5,
@@ -33,7 +38,10 @@ public class AppDbSeed
             },
              new Categoria() {
                 Id = 6,
-                Nome = "Pré/Pró Hormonal"
+                Nome = "Pré/Pró Hormonal",
+                Descricao = "Os melhores suplementos para para atingir seu objetivo de definição.",
+                Imagem = "img/hipertrofia_resized.jpg",
+                Destaque = true
             },
              new Categoria() {
                 Id = 7,
@@ -43,10 +51,10 @@ public class AppDbSeed
                 Id = 8,
                 Nome = "Vitamas e Minerais"
             }
-
-              builder.Entity<Categoria>().HasData(categorias);
+        };
+        builder.Entity<Categoria>().HasData(categorias);
         #endregion
-        }
+
 
         #region Populate Marca
         List<Marca> marcas = new() {
@@ -134,11 +142,11 @@ public class AppDbSeed
                 Id = 17,
                 Nome = "SUDRACT"
             }
-            
+        };
 
-              builder.Entity<Marca>().HasData(marcas);
+        builder.Entity<Marca>().HasData(marcas);
         #endregion
-        }
+
 
 
         #region Populate Produtos
@@ -244,7 +252,7 @@ public class AppDbSeed
                 Imagem = @"img/produtos/9.jpg",
                 CategoriaId = 2,
                 MarcaId = 11
-                
+
             },
 
             new Produto() {
@@ -311,13 +319,13 @@ public class AppDbSeed
                 Imagem = @"img/produtos/15.jpg",
                 CategoriaId = 3,
                 MarcaId = 7
-                
+
             },
 
             new Produto() {
                 Id = 1006971,
                 Nome = "Dr Peanut Avelã 600g - DR. PEANUT",
-                Descricao = "Essa é a pasta de amendoim dos seus sonhos, com o sabor irresistível de Avelã! Nossa receita faz com que ela seja incrivelmente cremosa, deliciosamente saborosa e perfeita para uma alimentação saudável. Feita com ingredientes de alta qualidade, sem adição de açúcar e sem glúten, cada colherada é uma explosão de sabores, com a combinação perfeita de amendoim e avelã. Experimente, seu lanche nunca mais será o mesmo! ";
+                Descricao = "Essa é a pasta de amendoim dos seus sonhos, com o sabor irresistível de Avelã! Nossa receita faz com que ela seja incrivelmente cremosa, deliciosamente saborosa e perfeita para uma alimentação saudável. Feita com ingredientes de alta qualidade, sem adição de açúcar e sem glúten, cada colherada é uma explosão de sabores, com a combinação perfeita de amendoim e avelã. Experimente, seu lanche nunca mais será o mesmo! ",
                 QtdEstoque = 8,
                 ValorAtual = 59.90M,
                 Imagem = @"img/produtos/16.jpg",
@@ -328,7 +336,7 @@ public class AppDbSeed
             new Produto() {
                 Id = 1006545,
                 Nome = "Cindy Bar Doce de coco 45g - HOPPER",
-                Descricao = "A Cindy Bar sabor Doce de Coco, da Hopper, é uma barrinha que fornece 13 g de proteínas de alto valor biológico, com adição de TCM, carboidratos de baixo índice glicêmico além de um mix de vitaminas e minerais."
+                Descricao = "A Cindy Bar sabor Doce de Coco, da Hopper, é uma barrinha que fornece 13 g de proteínas de alto valor biológico, com adição de TCM, carboidratos de baixo índice glicêmico além de um mix de vitaminas e minerais.",
                 QtdEstoque = 96,
                 ValorAtual = 9.50M,
                 Imagem = @"img/produtos/17.jpg",
@@ -428,7 +436,6 @@ public class AppDbSeed
                 Id = 1006622,
                 Nome = "Cracker Monster Chocolate Branco - ROCK",
                 Descricao = "O Cracker Monster ROCK é um saboroso e delicioso cracker, coberto com chocolate e recheado com a Pasta de Amendoim Branco ROCK, tudo isso ZERO açúcar, com proteína WheyRock, ótimo valor nutricional e sabor totalmente insano",
-                Descricao = "",
                 QtdEstoque = 44,
                 ValorAtual = 6.90M,
                 Imagem = @"img/produtos/26.jpg",
@@ -516,7 +523,7 @@ public class AppDbSeed
             new Produto() {
                 Id = 1007095,
                 Nome = "5-HTP 60Caps - PURITANS PRIDE",
-                Descricao = "O que é 5-HTP? O aminoácido 5-HTP — também conhecido como 5-hidroxitriptofano — vai agir no cérebro e no sistema nervoso central como ator principal para a formação de serotonina, aumentando sua produção."
+                Descricao = "O que é 5-HTP? O aminoácido 5-HTP — também conhecido como 5-hidroxitriptofano — vai agir no cérebro e no sistema nervoso central como ator principal para a formação de serotonina, aumentando sua produção.",
                 QtdEstoque = 1,
                 ValorAtual = 180M,
                 Imagem = @"img/produtos/34.jpg",
@@ -525,6 +532,6 @@ public class AppDbSeed
             }
         };
         builder.Entity<Produto>().HasData(produtos);
+        #endregion
     }
-
 }

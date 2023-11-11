@@ -1,9 +1,10 @@
 using BarraSuplementos.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace BarraSuplementos.Data;
 
-public class AppDbContext : DbContext
+public class AppDbContext : IdentityDbContext
 {
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     { }
@@ -11,6 +12,7 @@ public class AppDbContext : DbContext
     public DbSet<Carrinho> Carrinhos { get; set; }
     public DbSet<CarrinhoProduto> CarrinhoProdutos { get; set; }
     public DbSet<Categoria> Categorias { get; set; }
+    public DbSet<Marca> Marcas { get; set; }
     public DbSet<Objetivo> Objetivos { get; set; }
     public DbSet<ProdutoObjetivo> ProdutoObjetivos { get; set; }
     public DbSet<ProdutoSabor> ProdutoSabores { get; set; }
@@ -20,6 +22,7 @@ public class AppDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
+        AppDbSeed seed = new(builder);
 
         #region Relacionamento Muito para Muitos - CarrinhoProduto
         builder.Entity<CarrinhoProduto>().HasKey(
