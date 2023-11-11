@@ -18,6 +18,21 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult Produtos()
+    {
+        return View();
+    }
+
+    public IActionResult Detalhe()
+    {
+        return View();
+    }
+
+    public IActionResult FaleConosco()
+    {
+        return View();
+    }
+
     public IActionResult Privacy()
     {
         return View();

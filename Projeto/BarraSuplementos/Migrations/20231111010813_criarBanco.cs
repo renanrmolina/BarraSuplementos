@@ -430,6 +430,21 @@ namespace BarraSuplementos.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.InsertData(
+                table: "AspNetRoles",
+                columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
+                values: new object[,]
+                {
+                    { "67b86261-6ba0-4888-863e-c506d5ff0522", "23a8757d-06e6-4c5b-a57e-ff0c1d792d9c", "Cliente", "CLIENTE" },
+                    { "90901a72-ed64-4aa6-8d34-813e48389081", "62f0e9c2-1c1a-449f-b2a3-127bb0e705ad", "Administrador", "ADMINISTRADOR" },
+                    { "9b5190b6-918d-458d-9473-c4cf0fdf6ff0", "e85e4929-790a-4812-9bbb-2c03723a90aa", "Funcionário", "FUNCIONARIO" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUsers",
+                columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
+                values: new object[] { "66f78b3c-cea0-47b3-a8c5-04802a596522", 0, "39c970d4-6079-4ff1-b878-d09f9fe96726", "admin@barrasuplementos.com", true, false, null, "ADMIN@BARRASUPLEMENTOS.COM", "ADMIN", "AQAAAAEAACcQAAAAELZIdDj5xiuasbSHGY4plipFhmpu0nwWAggOmXp3o/JPZ7UjFgzNF3bC0s34gNJqOg==", null, false, "9940f935-751d-42ea-b375-1e3d5376b782", false, "Admin" });
+
+            migrationBuilder.InsertData(
                 table: "Categoria",
                 columns: new[] { "Id", "Descricao", "Destaque", "Imagem", "Nome" },
                 values: new object[,]
@@ -466,6 +481,16 @@ namespace BarraSuplementos.Migrations
                     { 15, null, "Rock" },
                     { 16, null, "Shark Pro" },
                     { 17, null, "SUDRACT" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUserRoles",
+                columns: new[] { "RoleId", "UserId" },
+                values: new object[,]
+                {
+                    { "67b86261-6ba0-4888-863e-c506d5ff0522", "66f78b3c-cea0-47b3-a8c5-04802a596522" },
+                    { "90901a72-ed64-4aa6-8d34-813e48389081", "66f78b3c-cea0-47b3-a8c5-04802a596522" },
+                    { "9b5190b6-918d-458d-9473-c4cf0fdf6ff0", "66f78b3c-cea0-47b3-a8c5-04802a596522" }
                 });
 
             migrationBuilder.InsertData(
@@ -508,6 +533,11 @@ namespace BarraSuplementos.Migrations
                     { 1007095, 8, "O que é 5-HTP? O aminoácido 5-HTP — também conhecido como 5-hidroxitriptofano — vai agir no cérebro e no sistema nervoso central como ator principal para a formação de serotonina, aumentando sua produção.", "img/produtos/34.jpg", false, 14, "5-HTP 60Caps - PURITANS PRIDE", 1, 180m, 0m },
                     { 1007107, 4, "Potencialize Seu Desempenho Nossa Energy Creatina é a aliada perfeita para impulsionar seu desempenho atlético e alcançar novos patamares nos treinos. Sendo monohidratada e saborosa, essa creatina em pó é ideal para quem busca resultados eficazes e uma experiência saborosa. Com uma fórmula de alta qualidade, a Energy Creatina fornece a dose necessária desse poderoso suplemento alimentar, contribuindo para aumentar a força, a resistência e a recuperação muscular.", "img/produtos/27.jpg", false, 16, "Creatina 300g - SHARK PRO", 42, 119.90m, 0m }
                 });
+
+            migrationBuilder.InsertData(
+                table: "Usuario",
+                columns: new[] { "UsuarioId", "DataNascimento", "Foto", "Nome" },
+                values: new object[] { "66f78b3c-cea0-47b3-a8c5-04802a596522", new DateTime(1990, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "/img/usuarios/avatar.png", "José Roberto Grigolato" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
