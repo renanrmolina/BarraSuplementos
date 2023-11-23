@@ -1,21 +1,29 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using BarraSuplementos.Models;
+using BarraSuplementos.Data;
+using BarraSuplementos.ViewModels;
 
 namespace BarraSuplementos.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly AppDbContext _context;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, AppDbContext context)
     {
         _logger = logger;
+        _context = context;
     }
 
     public IActionResult Index()
     {
-        return View();
+        HomeVM home = new() {
+            Categorias = _context.Categorias.Where(c => c.Destaque).ToList(),
+            Produtos = _context.Produtos.Take(8).ToList()
+        };
+        return View(home);
     }
 
     public IActionResult Produtos()
@@ -23,9 +31,12 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Detalhe()
+    public IActionResult Detalhe(int id)
     {
-        return View();
+        var produto = _context.Produtos.Find(id);
+        if (produto == null)
+            return NotFound();
+        return View(produto);
     }
 
     public IActionResult FaleConosco()

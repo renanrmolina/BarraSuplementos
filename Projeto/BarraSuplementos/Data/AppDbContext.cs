@@ -14,6 +14,7 @@ public class AppDbContext : IdentityDbContext
     public DbSet<Categoria> Categorias { get; set; }
     public DbSet<Marca> Marcas { get; set; }
     public DbSet<Objetivo> Objetivos { get; set; }
+    public DbSet<Produto> Produtos { get; set; }
     public DbSet<ProdutoObjetivo> ProdutoObjetivos { get; set; }
     public DbSet<ProdutoSabor> ProdutoSabores { get; set; }
     public DbSet<Sabor> Sabores { get; set; }
