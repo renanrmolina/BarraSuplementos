@@ -382,3 +382,7 @@
 .footer .copyright a:hover {
     color: var(--primary);
 }
+
+#sombra{
+    color: black; text-shadow: white 0.1em 0.1em 0.2em;
+}
