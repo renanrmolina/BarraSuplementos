@@ -28,7 +28,10 @@ public class HomeController : Controller
 
     public IActionResult Produtos()
     {
-        return View();
+        HomeVM home = new() {
+        Produtos = _context.Produtos.ToList()
+        };
+        return View(home);
     }
 
     public IActionResult Detalhe(int id)
