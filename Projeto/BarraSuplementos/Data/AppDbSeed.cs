@@ -583,7 +583,7 @@ public class AppDbSeed
                 UsuarioId = users[0].Id,
                 Nome = "José Roberto Grigolato",
                 DataNascimento = DateTime.Parse("01/01/1990"),
-                Foto = "/img/usuarios/avatar.png"
+                Foto = "/img/usuarios/avatar.jpg"
             }
         };
         builder.Entity<Usuario>().HasData(usuarios);

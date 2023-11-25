@@ -32,12 +32,15 @@
                 </div>
             </div>
             <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
+               @foreach (var categoria in Model.Categorias)
+               {
                 <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
                     <li class="nav-item me-2">
                         <a class="btn btn-outline-primary border-2 active" data-bs-toggle="pill"
-                            href="#tab-1">Vegetable</a>
+                            href="#tab-1">@categoria.Nome</a>
                     </li>
                 </ul>
+                }
             </div>
         </div>
      <!-- Product Start -->

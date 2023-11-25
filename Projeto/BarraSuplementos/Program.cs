@@ -1,4 +1,5 @@
 using BarraSuplementos.Data;
+using BarraSuplementos.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,6 +21,8 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(
     .AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();
 
+builder.Services.AddTransient<IUsuarioService, UsuarioService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -35,6 +38,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
