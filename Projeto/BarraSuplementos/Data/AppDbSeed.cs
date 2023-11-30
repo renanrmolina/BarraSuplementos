@@ -49,7 +49,7 @@ public class AppDbSeed
             },
             new Categoria() {
                 Id = 8,
-                Nome = "Vitamas e Minerais"
+                Nome = "Vitaminas e Minerais"
             }
         };
         builder.Entity<Categoria>().HasData(categorias);
