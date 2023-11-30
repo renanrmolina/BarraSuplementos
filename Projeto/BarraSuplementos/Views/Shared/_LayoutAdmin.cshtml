@@ -33,31 +33,25 @@
                     <li class="nav-item">
                         <a asp-action="Index" asp-controller="Admin" class="nav-link @(ViewBag.Title == "Dashboard" ? "active" : "link-body-emphasis")">
                             <i class="bi bi-speedometer2 me-2"></i>
-                            Dashboard
+                            Painel
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-action="Index" asp-controller="Produtos" class="nav-link @(ViewBag.Title == "Produtos" ? "active" : "link-body-emphasis")">
+                            <i class="bi bi-speedometer2 me-2"></i>
+                            Produtos
                         </a>
                     </li>
                     <li>
-                        <a asp-action="Index" asp-controller="Propriedades" class="nav-link @(ViewBag.Title == "Propriedades" ? "active" : "link-body-emphasis")">
+                        <a asp-action="Index" asp-controller="Categorias" class="nav-link @(ViewBag.Title == "Categorias" ? "active" : "link-body-emphasis")">
                             <i class="bi bi-house me-2"></i>
-                            Produto
+                            Categorias
                         </a>
                     </li>
                     <li>
-                        <a asp-action="Index" asp-controller="TipoPropriedades" class="nav-link @(ViewBag.Title == "Tipos de Propriedades" ? "active" : "link-body-emphasis")">
+                        <a asp-action="Index" asp-controller="Marcas" class="nav-link @(ViewBag.Title == "Marcas" ? "active" : "link-body-emphasis")">
                             <i class="bi bi-list-stars me-2"></i>
-                            Tipos de Propriedades
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link @(ViewBag.Title == "Agentes" ? "active" : "link-body-emphasis")">
-                            <i class="bi bi-people-fill me-2"></i>
-                            Agentes
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link @(ViewBag.Title == "Avaliações" ? "active" : "link-body-emphasis")">
-                            <i class="bi bi-chat-text-fill me-2"></i>
-                            Avaliações
+                            Marcas
                         </a>
                     </li>
                 </ul>

@@ -1,16 +1,17 @@
+@model BarraSuplementos.Models.Produto
 @{
     ViewData["Title"] = "Detalhe";
     Layout = "~/Views/Shared/_LayoutFront.cshtml";
 }
 
 <!-- Page Header Start -->
-<div class="container-fluid page-header wow fadeIn" data-wow-delay="0.1s" style="background-image: url(../img/FundoTeste2.jpg);">
+<div class="container-fluid mb-5 page-header wow fadeIn" data-wow-delay="0.1s" style="background-image: url(../../img/FundoTeste2.jpg);">
         <div class=" container">
-    <h1 class="display-3 mb-3 animated slideInDown">Produto XXXXXX</h1>
+    <h1 class="display-3 mb-3 animated slideInDown">Produto</h1>
     <nav aria-label="breadcrumb animated slideInDown">
         <ol class="breadcrumb mb-0">
             <li class="breadcrumb-item"><a class="text-body" href="#">Início</a></li>
-            <li class="breadcrumb-item text-dark active" aria-current="page">XXXXXXXXXX</li>
+            <li class="breadcrumb-item text-dark active" aria-current="page">Detalhes do Produto</li>
         </ol>
     </nav>
 </div>
@@ -20,14 +21,18 @@
 <!-- Product Start -->
 <div class="container-xxl py-5">
     <div class="container">
-        <div class="row g-0 gx-5 align-items-end">
-            <div class="col-lg-6">
-                <div class="section-header text-start mb-5 wow fadeInUp" data-wow-delay="0.1s"
-                    style="max-width: 500px;">
-                    <h1 class="display-5 mb-3">Nossos Produtos </h1>
-                    <p>Conheça nossa variedade de produtos:
-                    </p>
+        <div class="row g-0 gx-5 align-items-start">
+            <div class="col-lg-8">
+                <div class="section-header text-start mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="display-5 mb-4">@Model.Nome </h1>
+                    <p><b>Descrição:</b> @Html.Raw(Model.Descricao)</p>
+                    <p><b>Categoria:</b> @Model.Categoria.Nome</p>
+                    <p><b>Marca:</b> @Model.Marca.Nome</p>
+                    <h3>Preço: @Model.ValorAtual</h3>
                 </div>
+            </div>
+            <div class="col-lg-4">
+                <img src="@Model.Imagem" alt="" class="img-fluid">
             </div>
         </div>
     </div>

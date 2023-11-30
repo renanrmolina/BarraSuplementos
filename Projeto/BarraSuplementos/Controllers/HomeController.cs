@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using BarraSuplementos.Models;
 using BarraSuplementos.Data;
 using BarraSuplementos.ViewModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace BarraSuplementos.Controllers;
 
@@ -29,15 +30,18 @@ public class HomeController : Controller
     public IActionResult Produtos()
     {
         HomeVM home = new() {
-        Categorias = _context.Categorias.ToList(),
-        Produtos = _context.Produtos.ToList()
+            Categorias = _context.Categorias.ToList(),
+            Produtos = _context.Produtos.ToList()
         };
         return View(home);
     }
 
     public IActionResult Detalhe(int id)
     {
-        var produto = _context.Produtos.Find(id);
+        var produto = _context.Produtos.Where(p => p.Id == id)
+            .Include(p => p.Categoria)
+            .Include(p => p.Marca)
+            .SingleOrDefault();
         if (produto == null)
             return NotFound();
         return View(produto);

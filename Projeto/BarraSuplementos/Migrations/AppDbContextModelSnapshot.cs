@@ -123,7 +123,7 @@ namespace BarraSuplementos.Migrations
                             Id = 4,
                             Descricao = "Os melhores suplementos para atingir seu objetivo de ganho de massa.",
                             Destaque = true,
-                            Imagem = "img/ganhoMassa_resized (1).jpg",
+                            Imagem = "/img/ganhoMassa_resized (1).jpg",
                             Nome = "Massa Muscular"
                         },
                         new
@@ -137,7 +137,7 @@ namespace BarraSuplementos.Migrations
                             Id = 6,
                             Descricao = "Os melhores suplementos para para atingir seu objetivo de definição.",
                             Destaque = true,
-                            Imagem = "img/hipertrofia_resized.jpg",
+                            Imagem = "/img/hipertrofia_resized.jpg",
                             Nome = "Pré/Pró Hormonal"
                         },
                         new
@@ -334,7 +334,7 @@ namespace BarraSuplementos.Migrations
                             Id = 6328,
                             CategoriaId = 1,
                             Descricao = "600ml, polipropileno (BPA), matéria-prima atóxica, livre de Bisfenol A e Ftalato (DEHP) COR: PRETA",
-                            Imagem = "img/produtos/1.png",
+                            Imagem = "/img/produtos/1.png",
                             Lancamento = true,
                             MarcaId = 4,
                             Nome = "Coqueteleira - BLACKSKULL",
@@ -347,7 +347,7 @@ namespace BarraSuplementos.Migrations
                             Id = 1006583,
                             CategoriaId = 1,
                             Descricao = "- Odor Free. - Antivazamento.- 600ml. ",
-                            Imagem = "img/produtos/2.png",
+                            Imagem = "/img/produtos/2.png",
                             Lancamento = true,
                             MarcaId = 1,
                             Nome = "Coqueteleira - FTW",
@@ -360,7 +360,7 @@ namespace BarraSuplementos.Migrations
                             Id = 6098,
                             CategoriaId = 1,
                             Descricao = "O Strap Monster Be Stronger é um acessório essencial pra você amador e profissional da musculação, cross training, powerlifting, bodybuilding e weightlifting!",
-                            Imagem = "img/produtos/3.png",
+                            Imagem = "/img/produtos/3.png",
                             Lancamento = true,
                             MarcaId = 3,
                             Nome = "Strap monster - BESTRONGER",
@@ -373,7 +373,7 @@ namespace BarraSuplementos.Migrations
                             Id = 1006531,
                             CategoriaId = 1,
                             Descricao = "Antivazamento.- 600ml. ",
-                            Imagem = "img/produtos/4.jpg",
+                            Imagem = "/img/produtos/4.jpg",
                             Lancamento = true,
                             MarcaId = 9,
                             Nome = "Coqueteleira com mola - INTEGRALMÉDICA",
@@ -386,7 +386,7 @@ namespace BarraSuplementos.Migrations
                             Id = 1006518,
                             CategoriaId = 2,
                             Descricao = "O Therma Pro Hardcore é um termogênico que fornece 280 mg de cafeína, ótima opção para aumentar a energia e queimar gordura.",
-                            Imagem = "img/produtos/5.jpg",
+                            Imagem = "/img/produtos/5.jpg",
                             Lancamento = false,
                             MarcaId = 9,
                             Nome = "Therma Pro Hardcore 60caps - INTEGRALMÉDICA",
@@ -399,7 +399,7 @@ namespace BarraSuplementos.Migrations
                             Id = 1006940,
                             CategoriaId = 2,
                             Descricao = "Apresentação: Pote com 60 cápsulas. Ingredientes: Picolinato de cromo, estabilizantes celulose microcristalina e amido, antiumectante dióxido de silício. Ingredientes da cápsula: Gelatina, opacificante dióxido de titânio e água potável filtrada.",
-                            Imagem = "img/produtos/6.jpg",
+                            Imagem = "/img/produtos/6.jpg",
                             Lancamento = false,
                             MarcaId = 7,
                             Nome = "Picolinato de Cromo 60caps - FTW SPORTS NUTRITION",
@@ -412,7 +412,7 @@ namespace BarraSuplementos.Migrations
                             Id = 6472,
                             CategoriaId = 2,
                             Descricao = "O Diabo Verde é um pré-treino em cápsulas para atletas a base de cafeína que atua no aumento da capacidade de resistência e no desempenho de exercícios físicos.",
-                            Imagem = "img/produtos/7.jpg",
+                            Imagem = "/img/produtos/7.jpg",
                             Lancamento = false,
                             MarcaId = 7,
                             Nome = "Thermo CAPS 60caps - DIABO VERDE FTW",
@@ -425,7 +425,7 @@ namespace BarraSuplementos.Migrations
                             Id = 1006987,
                             CategoriaId = 2,
                             Descricao = "O THERMO FLAME entrega 360mg de cafeína pura por dose, proporcionando mais energia e foco, otimizando os resultados na busca pelo emagrecimento.",
-                            Imagem = "img/produtos/8.jpg",
+                            Imagem = "/img/produtos/8.jpg",
                             Lancamento = false,
                             MarcaId = 11,
                             Nome = "Thermoflame 60caps - BLACKSKULL",
@@ -438,7 +438,7 @@ namespace BarraSuplementos.Migrations
                             Id = 6228,
                             CategoriaId = 2,
                             Descricao = "NITRO FIRE 420mg é um suplemento a base de cafeína. Sua fórmula exclusiva além de dar um ânimo de imediato e duradouro, aumenta a termogênese do atleta!",
-                            Imagem = "img/produtos/9.jpg",
+                            Imagem = "/img/produtos/9.jpg",
                             Lancamento = false,
                             MarcaId = 11,
                             Nome = "Termogêmico Nitrofire 60caps - NITROMAX",
@@ -451,7 +451,7 @@ namespace BarraSuplementos.Migrations
                             Id = 1007058,
                             CategoriaId = 3,
                             Descricao = "omos conhecidos por nosso sabor inigualável e agora realizamos o sonho de todos os amantes de alfajor com nossa versão dessa maravilha. Composta por duas camadas de leves e crocantes bolachas, recheadas com a famosa pasta de amendoim Dr. Peanut e cobertas com chocolate zero açúcar. Sabor e textura inconfundíveis, com ingredientes de altíssima qualidade. Experimente! ",
-                            Imagem = "img/produtos/10.jpg",
+                            Imagem = "/img/produtos/10.jpg",
                             Lancamento = false,
                             MarcaId = 6,
                             Nome = "Alfajor Avelã 55g - DR. PEANUT",
@@ -464,7 +464,7 @@ namespace BarraSuplementos.Migrations
                             Id = 1007055,
                             CategoriaId = 3,
                             Descricao = "Somos conhecidos por nosso sabor inigualável e agora realizamos o sonho de todos os amantes de alfajor lançando nossa versão dessa maravilha. Composta por duas camadas de leves e crocantes bolachas, recheadas com a famosa pasta de amendoim Dr. Peanut e cobertas com chocolate zero açúcar. Sabor e textura inconfundíveis com ingredientes de altíssima qualidade. Experimente!",
-                            Imagem = "img/produtos/11.jpg",
+                            Imagem = "/img/produtos/11.jpg",
                             Lancamento = false,
                             MarcaId = 6,
                             Nome = "Alfajor Chocolante Branco 55g - DR. PEANUT",
@@ -477,7 +477,7 @@ namespace BarraSuplementos.Migrations
                             Id = 1006966,
                             CategoriaId = 3,
                             Descricao = "Quem é #DoctorLover de verdade sabe que essa é uma das queridinhas, né! A combinação perfeita da pasta de amendoim com chocolate, avelã e wafer, sem adição de açúcar e zero glúten só poderia resultar nessa delícia. Garanta já a sua e leve esse sabor especial para o seu dia a dia mais saudável!",
-                            Imagem = "img/produtos/12.jpg",
+                            Imagem = "/img/produtos/12.jpg",
                             Lancamento = false,
                             MarcaId = 6,
                             Nome = "Dr Peanut Buenissimo 600g - DR. PEANUT",
@@ -490,7 +490,7 @@ namespace BarraSuplementos.Migrations
                             Id = 1007074,
                             CategoriaId = 3,
                             Descricao = "Como preparar: diluir 20g (uma colher de sopa) do produto em 500ml de água gelada, mexer até que o produto se dissolva e estará pronto para o consumo; indicados para adultos praticantes de atividade. Repõe os eletrólitos perdidos no suor; - evita câimbras e desidratação; - melhor desempenho; - baixa caloria",
-                            Imagem = "img/produtos/13.jpg",
+                            Imagem = "/img/produtos/13.jpg",
                             Lancamento = false,
                             MarcaId = 17,
                             Nome = "Hydramaxi Morango com maracujá 20g - SUDRACT",
@@ -503,7 +503,7 @@ namespace BarraSuplementos.Migrations
                             Id = 1006972,
                             CategoriaId = 3,
                             Descricao = "Aquele sabor de infância que só a Doctor Leite em Pó pode te proporcionar! Aliada e coringa de todas as refeições, além de ter zero adição de açúcar e zero glúten, essa delícia é perfeita para o seu dia a dia. Desde o café da manhã mais completo, até um lanchinho rápido e saudável, esse sabor vai te conquistar",
-                            Imagem = "img/produtos/14.jpg",
+                            Imagem = "/img/produtos/14.jpg",
                             Lancamento = false,
                             MarcaId = 6,
                             Nome = "Dr Peanut Leite em pó 600g - DR. PEANUT",
@@ -516,7 +516,7 @@ namespace BarraSuplementos.Migrations
                             Id = 1006951,
                             CategoriaId = 3,
                             Descricao = "O que é o #Dilabol Black da FTW? Cada substância escolhida para o #Dilabol Black Diabo Verde foi pensada exclusivamente para o melhor desempenho das vias metabólicas do nosso organismo a combinação perfeita para o seu treino Hard!",
-                            Imagem = "img/produtos/15.jpg",
+                            Imagem = "/img/produtos/15.jpg",
                             Lancamento = false,
                             MarcaId = 7,
                             Nome = "Dilabol Black 120caps - FTW SPORTS NUTRITION",
@@ -529,7 +529,7 @@ namespace BarraSuplementos.Migrations
                             Id = 1006971,
                             CategoriaId = 3,
                             Descricao = "Essa é a pasta de amendoim dos seus sonhos, com o sabor irresistível de Avelã! Nossa receita faz com que ela seja incrivelmente cremosa, deliciosamente saborosa e perfeita para uma alimentação saudável. Feita com ingredientes de alta qualidade, sem adição de açúcar e sem glúten, cada colherada é uma explosão de sabores, com a combinação perfeita de amendoim e avelã. Experimente, seu lanche nunca mais será o mesmo! ",
-                            Imagem = "img/produtos/16.jpg",
+                            Imagem = "/img/produtos/16.jpg",
                             Lancamento = false,
                             MarcaId = 6,
                             Nome = "Dr Peanut Avelã 600g - DR. PEANUT",
@@ -542,7 +542,7 @@ namespace BarraSuplementos.Migrations
                             Id = 1006545,
                             CategoriaId = 4,
                             Descricao = "A Cindy Bar sabor Doce de Coco, da Hopper, é uma barrinha que fornece 13 g de proteínas de alto valor biológico, com adição de TCM, carboidratos de baixo índice glicêmico além de um mix de vitaminas e minerais.",
-                            Imagem = "img/produtos/17.jpg",
+                            Imagem = "/img/produtos/17.jpg",
                             Lancamento = false,
                             MarcaId = 8,
                             Nome = "Cindy Bar Doce de coco 45g - HOPPER",
@@ -555,7 +555,7 @@ namespace BarraSuplementos.Migrations
                             Id = 1007039,
                             CategoriaId = 4,
                             Descricao = "O que é 100% Whey Protein Apresenta variedade e praticidade em um só produto. Praticantes de atividade física ou quem busca uma rotina alimentar com bons nutrientes se beneficia do uso das proteínas do soro do leite, que fornecem qualidade nutricional com alto valor biológico. Contém grande concentração de proteínas e aminoácidos (rico em Bcaas e Glutamina) que são essenciais para os processos de ganho, recuperação e manutenção muscular. ",
-                            Imagem = "img/produtos/18.jpg",
+                            Imagem = "/img/produtos/18.jpg",
                             Lancamento = false,
                             MarcaId = 7,
                             Nome = "Whey Ftw 100% Cookies 900g refil - FTW",
@@ -568,7 +568,7 @@ namespace BarraSuplementos.Migrations
                             Id = 1007036,
                             CategoriaId = 4,
                             Descricao = "O que é 100% Whey Protein Apresenta variedade e praticidade em um só produto. Praticantes de atividade física ou quem busca uma rotina alimentar com bons nutrientes se beneficia do uso das proteínas do soro do leite, que fornecem qualidade nutricional com alto valor biológico. Contém grande concentração de proteínas e aminoácidos (rico em Bcaas e Glutamina) que são essenciais para os processos de ganho, recuperação e manutenção muscular. ",
-                            Imagem = "img/produtos/19.jpg",
+                            Imagem = "/img/produtos/19.jpg",
                             Lancamento = false,
                             MarcaId = 7,
                             Nome = "Whey Ftw 100% Chocolate 900g refil - FTW",
@@ -581,7 +581,7 @@ namespace BarraSuplementos.Migrations
                             Id = 1006499,
                             CategoriaId = 4,
                             Descricao = "Proteína e Emagrecimento A proteína é um nutriente que nos traz sensação de saciedade. No emagrecimento, o lanche rico em proteína irá auxiliar o controle da ingestão entre as refeições. Para quem visa o ganho de massa muscular, colocar proteína nos lanches é uma excelente estratégia para o consumo da necessidade proteica diária e, as barrinhas trazem muita praticidade e sabor!",
-                            Imagem = "img/produtos/20.jpg",
+                            Imagem = "/img/produtos/20.jpg",
                             Lancamento = false,
                             MarcaId = 10,
                             Nome = "Top Whey Bar Brigadeiro 41g - MAX TITANIUM",
@@ -594,7 +594,7 @@ namespace BarraSuplementos.Migrations
                             Id = 1006498,
                             CategoriaId = 4,
                             Descricao = "Proteína e Emagrecimento A proteína é um nutriente que nos traz sensação de saciedade. No emagrecimento, o lanche rico em proteína irá auxiliar o controle da ingestão entre as refeições. Para quem visa o ganho de massa muscular, colocar proteína nos lanches é uma excelente estratégia para o consumo da necessidade proteica diária e, as barrinhas trazem muita praticidade e sabor!",
-                            Imagem = "img/produtos/21.jpg",
+                            Imagem = "/img/produtos/21.jpg",
                             Lancamento = false,
                             MarcaId = 10,
                             Nome = "Top Whey Bar Chocolate com Avelã 41g - MAX TITANIUM",
@@ -607,7 +607,7 @@ namespace BarraSuplementos.Migrations
                             Id = 1007037,
                             CategoriaId = 4,
                             Descricao = "O que é 100% Whey Protein Apresenta variedade e praticidade em um só produto. Praticantes de atividade física ou quem busca uma rotina alimentar com bons nutrientes se beneficia do uso das proteínas do soro do leite, que fornecem qualidade nutricional com alto valor biológico. Contém grande concentração de proteínas e aminoácidos (rico em Bcaas e Glutamina) que são essenciais para os processos de ganho, recuperação e manutenção muscular. ",
-                            Imagem = "img/produtos/22.jpg",
+                            Imagem = "/img/produtos/22.jpg",
                             Lancamento = false,
                             MarcaId = 7,
                             Nome = "Whey Ftw 100% Morango 900g refil - FTW",
@@ -620,7 +620,7 @@ namespace BarraSuplementos.Migrations
                             Id = 1006959,
                             CategoriaId = 4,
                             Descricao = "Aumento de força muscular; Ganho de massa muscular; Aumento na saciedade; Recuperação muscular; Energia",
-                            Imagem = "img/produtos/23.jpg",
+                            Imagem = "/img/produtos/23.jpg",
                             Lancamento = false,
                             MarcaId = 5,
                             Nome = "Dark Bar Creme de coco com castanha 90G -  DARKNESS",
@@ -633,7 +633,7 @@ namespace BarraSuplementos.Migrations
                             Id = 1006621,
                             CategoriaId = 4,
                             Descricao = "A Protein Crisp é formada por 13g proteínas de alto valor biológico. Essas proteínas são fundamentais para a construção de muscular, além de serem importantes para a manutenção da massa muscular em programas de perda de peso. Por isso a Protein Crisp pode ser consumida tanto em dietas para perda de peso, quanto em dietas para ganho de massa muscular. Por ser uma barra de proteína completa, com proteínas, gorduras essenciais e aminoácidos, sua ingestão aumenta a saciedade entre as refeições, diminuindo a vontade de comer doces e alimentos calóricos.",
-                            Imagem = "img/produtos/24.jpg",
+                            Imagem = "/img/produtos/24.jpg",
                             Lancamento = false,
                             MarcaId = 9,
                             Nome = "CRISP BAR Duo Crunch 45g - INTEGRALMÉDICA",
@@ -646,7 +646,7 @@ namespace BarraSuplementos.Migrations
                             Id = 32,
                             CategoriaId = 4,
                             Descricao = "Ganhe volume e massa muscular, aumente sua força e melhore o desempenho e resistência nos seus treinos suplementando com a Creatina Hardcore Integralmédica. Produto 100% puro, de excelente qualidade.",
-                            Imagem = "img/produtos/25.jpg",
+                            Imagem = "/img/produtos/25.jpg",
                             Lancamento = false,
                             MarcaId = 9,
                             Nome = "Creatina 300g - INTEGRALMÉDICA",
@@ -659,7 +659,7 @@ namespace BarraSuplementos.Migrations
                             Id = 1006622,
                             CategoriaId = 4,
                             Descricao = "O Cracker Monster ROCK é um saboroso e delicioso cracker, coberto com chocolate e recheado com a Pasta de Amendoim Branco ROCK, tudo isso ZERO açúcar, com proteína WheyRock, ótimo valor nutricional e sabor totalmente insano",
-                            Imagem = "img/produtos/26.jpg",
+                            Imagem = "/img/produtos/26.jpg",
                             Lancamento = false,
                             MarcaId = 15,
                             Nome = "Cracker Monster Chocolate Branco - ROCK",
@@ -672,7 +672,7 @@ namespace BarraSuplementos.Migrations
                             Id = 1007107,
                             CategoriaId = 4,
                             Descricao = "Potencialize Seu Desempenho Nossa Energy Creatina é a aliada perfeita para impulsionar seu desempenho atlético e alcançar novos patamares nos treinos. Sendo monohidratada e saborosa, essa creatina em pó é ideal para quem busca resultados eficazes e uma experiência saborosa. Com uma fórmula de alta qualidade, a Energy Creatina fornece a dose necessária desse poderoso suplemento alimentar, contribuindo para aumentar a força, a resistência e a recuperação muscular.",
-                            Imagem = "img/produtos/27.jpg",
+                            Imagem = "/img/produtos/27.jpg",
                             Lancamento = false,
                             MarcaId = 16,
                             Nome = "Creatina 300g - SHARK PRO",
@@ -685,7 +685,7 @@ namespace BarraSuplementos.Migrations
                             Id = 6414,
                             CategoriaId = 5,
                             Descricao = "Nutrientes essenciais utilizados como combustíveis para as células e uma das fontes de energia, os ácidos graxos não são produzidos pelo corpo, mas são muito importantes para nosso organismo. O ômega 3 é um ácido graxo e pode ser encontrado em peixes de água fria ou suplementos alimentares de forma concentrada e pura.",
-                            Imagem = "img/produtos/28.jpg",
+                            Imagem = "/img/produtos/28.jpg",
                             Lancamento = false,
                             MarcaId = 2,
                             Nome = "Ômega 3 60caps - ATLHETICA NUTRITION",
@@ -698,7 +698,7 @@ namespace BarraSuplementos.Migrations
                             Id = 1007093,
                             CategoriaId = 6,
                             Descricao = "O Tribulus Terrestris Gold da Orion Supplements é um suplemento nutricional formulado para ajudar a aumentar a energia, a resistência e a força física. A fórmula avançada combina os benefícios do Tribulus Terrestris com outros ingredientes naturais cuidadosamente selecionados para ajudar a melhorar o desempenho físico e sexual.",
-                            Imagem = "img/produtos/29.jpg",
+                            Imagem = "/img/produtos/29.jpg",
                             Lancamento = false,
                             MarcaId = 13,
                             Nome = "Tribulus GOLD 90caps - ORION SUPPLEMENTS",
@@ -711,7 +711,7 @@ namespace BarraSuplementos.Migrations
                             Id = 6344,
                             CategoriaId = 7,
                             Descricao = "A Regata Preta Basquete Max Titanium - Edição Limitada é uma opção moderna e estilosa para quem pratica esportes, oferecendo conforto e liberdade de movimento.",
-                            Imagem = "img/produtos/30.jpg",
+                            Imagem = "/img/produtos/30.jpg",
                             Lancamento = false,
                             MarcaId = 10,
                             Nome = "Camisa / Regata - MAX TITANIUM",
@@ -724,7 +724,7 @@ namespace BarraSuplementos.Migrations
                             Id = 268,
                             CategoriaId = 8,
                             Descricao = "APRESENTAÇÃO: Pote com 60 cápsulas. INGREDIENTES: Acetato de retinol, picolinato de cromo, bisglicinato de cobre, tiamina mononitrato, riboflavina, cloridrato piridoxina, cianocobalamina, ácido ascórbico, vitamina D3 (colecalciferol), acetato de tocoferol, nicotinamida, pantotenato de cálcio, sulfato de manganês, sulfato de zinco, óxido de magnésio, estabilizantes celulose microcristalina e amido de milho e antiumectante dióxido de silício.",
-                            Imagem = "img/produtos/31.jpg",
+                            Imagem = "/img/produtos/31.jpg",
                             Lancamento = false,
                             MarcaId = 7,
                             Nome = "Multivitaminico 60caps - FTW",
@@ -737,7 +737,7 @@ namespace BarraSuplementos.Migrations
                             Id = 1007005,
                             CategoriaId = 8,
                             Descricao = "4-SLEEP possui a combinação de quatro compostos ativos que em conjunto atuam na indução do sono mais profundo e reparador",
-                            Imagem = "img/produtos/32.jpg",
+                            Imagem = "/img/produtos/32.jpg",
                             Lancamento = false,
                             MarcaId = 12,
                             Nome = "4 Sleep 90caps - INTEGRALMÉDICA",
@@ -750,7 +750,7 @@ namespace BarraSuplementos.Migrations
                             Id = 1007094,
                             CategoriaId = 8,
                             Descricao = "Melatonina 3mg GNC  é um suplemento ideal para pessoas que possuem dificuldades para dormir ou que querem melhorar ainda mais a qualidade do sono. Com a Melatonina é possível dormir menos horas e melhor, pois a melatonina vai te levar ao sono REM mais rapidamente. É impressionante como acordamos melhor ao utilizar a melatonina logo antes de dormir. A melatonina é um hormônio natural que o seu corpo já produz, portanto é 100% seguro o uso deste produto.",
-                            Imagem = "img/produtos/33.jpg",
+                            Imagem = "/img/produtos/33.jpg",
                             Lancamento = false,
                             MarcaId = 12,
                             Nome = "Melatonina 120caps - GNC",
@@ -763,7 +763,7 @@ namespace BarraSuplementos.Migrations
                             Id = 1007095,
                             CategoriaId = 8,
                             Descricao = "O que é 5-HTP? O aminoácido 5-HTP — também conhecido como 5-hidroxitriptofano — vai agir no cérebro e no sistema nervoso central como ator principal para a formação de serotonina, aumentando sua produção.",
-                            Imagem = "img/produtos/34.jpg",
+                            Imagem = "/img/produtos/34.jpg",
                             Lancamento = false,
                             MarcaId = 14,
                             Nome = "5-HTP 60Caps - PURITANS PRIDE",
@@ -847,9 +847,9 @@ namespace BarraSuplementos.Migrations
                     b.HasData(
                         new
                         {
-                            UsuarioId = "66f78b3c-cea0-47b3-a8c5-04802a596522",
+                            UsuarioId = "0c7c4acc-1c79-423e-b1c7-1e006e0ab453",
                             DataNascimento = new DateTime(1990, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Foto = "/img/usuarios/avatar.png",
+                            Foto = "/img/usuarios/avatar.jpg",
                             Nome = "José Roberto Grigolato"
                         });
                 });
@@ -882,22 +882,22 @@ namespace BarraSuplementos.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "90901a72-ed64-4aa6-8d34-813e48389081",
-                            ConcurrencyStamp = "62f0e9c2-1c1a-449f-b2a3-127bb0e705ad",
+                            Id = "e8fc5eb0-aac9-4ab9-8888-d52c9eb65f47",
+                            ConcurrencyStamp = "1c6272c5-279c-4ca4-ae19-45357741d6b6",
                             Name = "Administrador",
                             NormalizedName = "ADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "9b5190b6-918d-458d-9473-c4cf0fdf6ff0",
-                            ConcurrencyStamp = "e85e4929-790a-4812-9bbb-2c03723a90aa",
+                            Id = "9fa85eaa-d129-4f6d-afe5-e6b47c0ebc95",
+                            ConcurrencyStamp = "1ce70051-4f4e-4560-af48-853d6117f676",
                             Name = "Funcionário",
                             NormalizedName = "FUNCIONARIO"
                         },
                         new
                         {
-                            Id = "67b86261-6ba0-4888-863e-c506d5ff0522",
-                            ConcurrencyStamp = "23a8757d-06e6-4c5b-a57e-ff0c1d792d9c",
+                            Id = "76743f29-00cb-4372-be3b-303b6d6a79c1",
+                            ConcurrencyStamp = "3ac8ea46-4c94-47a3-9d6c-ebeface89e2a",
                             Name = "Cliente",
                             NormalizedName = "CLIENTE"
                         });
@@ -992,17 +992,17 @@ namespace BarraSuplementos.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "66f78b3c-cea0-47b3-a8c5-04802a596522",
+                            Id = "0c7c4acc-1c79-423e-b1c7-1e006e0ab453",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "39c970d4-6079-4ff1-b878-d09f9fe96726",
+                            ConcurrencyStamp = "0ba6679b-d1ee-430a-a349-7f7485c6bb74",
                             Email = "admin@barrasuplementos.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@BARRASUPLEMENTOS.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAELZIdDj5xiuasbSHGY4plipFhmpu0nwWAggOmXp3o/JPZ7UjFgzNF3bC0s34gNJqOg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEEDNKubuvbjBnGamULFpa964ARmDXxVTaIwdDfFzCsCVhcMowDx9TNZXNGhPEvd9ew==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "9940f935-751d-42ea-b375-1e3d5376b782",
+                            SecurityStamp = "67dceda9-3af6-4e06-aceb-6e4c1442c01f",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         });
@@ -1070,18 +1070,18 @@ namespace BarraSuplementos.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "66f78b3c-cea0-47b3-a8c5-04802a596522",
-                            RoleId = "90901a72-ed64-4aa6-8d34-813e48389081"
+                            UserId = "0c7c4acc-1c79-423e-b1c7-1e006e0ab453",
+                            RoleId = "e8fc5eb0-aac9-4ab9-8888-d52c9eb65f47"
                         },
                         new
                         {
-                            UserId = "66f78b3c-cea0-47b3-a8c5-04802a596522",
-                            RoleId = "9b5190b6-918d-458d-9473-c4cf0fdf6ff0"
+                            UserId = "0c7c4acc-1c79-423e-b1c7-1e006e0ab453",
+                            RoleId = "9fa85eaa-d129-4f6d-afe5-e6b47c0ebc95"
                         },
                         new
                         {
-                            UserId = "66f78b3c-cea0-47b3-a8c5-04802a596522",
-                            RoleId = "67b86261-6ba0-4888-863e-c506d5ff0522"
+                            UserId = "0c7c4acc-1c79-423e-b1c7-1e006e0ab453",
+                            RoleId = "76743f29-00cb-4372-be3b-303b6d6a79c1"
                         });
                 });
 
