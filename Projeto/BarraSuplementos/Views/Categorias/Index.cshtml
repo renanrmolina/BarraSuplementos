@@ -1,15 +1,23 @@
 @model IEnumerable<BarraSuplementos.Models.Categoria>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Categorias";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>Index</h1>
+@section Styles {
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+}
+@section Scripts {
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+    <script src="~/js/datatables.js"></script>
+}
 
-<p>
-    <a asp-action="Create">Create New</a>
+<h1  class="display-4">Lista de Categorias</h1>
+<p class="py-3">
+    <a class="btn btn-secondary" asp-action="Create"><i class="bi bi-plus-circle-fill"></i> Adicionar</a>
 </p>
+
 <table class="table">
     <thead>
         <tr>
