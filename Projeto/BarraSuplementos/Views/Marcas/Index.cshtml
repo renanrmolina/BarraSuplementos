@@ -14,7 +14,7 @@
 }
 
 
-<h1  class="display-4">Lista de Marcas</h1>
+<h1 class="display-4">Lista de Marcas</h1>
 <p class="py-3">
     <a class="btn btn-secondary" asp-action="Create"><i class="bi bi-plus-circle-fill"></i> Adicionar</a>
 </p>
@@ -29,17 +29,21 @@
         </tr>
     </thead>
     <tbody>
-            @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" data-bs-toggle="tooltip" data-bs-title="Editar"><i
+                            class="bi bi-pencil-fill"></i></a> |
+                    <a asp-action="Details" asp-route-id="@item.Id" data-bs-toggle="tooltip" data-bs-title="Detalhes"><i
+                            class="bi bi-search"></i></a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" data-bs-toggle="tooltip" data-bs-title="Excluir"><i
+                            class="bi bi-trash-fill"></i></a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

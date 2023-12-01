@@ -37,7 +37,8 @@
         </dd>
     </dl>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
-    <a asp-action="Index">Voltar para lista</a>
+<div class="col-12 mt-4">
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-success me-3"><i class="bi bi-pencil-fill"></i>
+        Editar</a>
+    <a asp-action="Index" class="btn btn-primary"><i class="bi bi-arrow-left-circle-fill"></i> Voltar a Listagem</a>
 </div>
