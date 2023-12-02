@@ -63,7 +63,6 @@ namespace BarraSuplementos.Controllers
             {
                 _context.Add(categoria);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
 
                 if (formFile != null)
                 {
@@ -78,6 +77,8 @@ namespace BarraSuplementos.Controllers
                     categoria.Imagem = "/img/categorias/" + fileName;
                     await _context.SaveChangesAsync();
                 }
+                
+                return RedirectToAction(nameof(Index));
             }
             return View(categoria);
         }

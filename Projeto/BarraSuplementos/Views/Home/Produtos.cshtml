@@ -51,13 +51,13 @@
                     <div class="row g-4">
                         @foreach (var produto in Model.Produtos)
                         {
-                            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="@(tempo.ToString().Replace(',', '.'))s">
-                                <div class="product-item">
-                                    <div class="position-relative bg-light overflow-hidden">
-                                        <img class="img-fluid w-100" src="@produto.Imagem" alt="">
+                            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" >
+                                <div class="product-item " >
+                                    <div class="position-relative overflow-hidden">
+                                        <img class="img-fluid w-100" src="@produto.Imagem" alt="" style="height: 300px; object-fit: contain">
                                     </div>
                                     <div class="text-center p-4">
-                                        <a class="d-block h5 mb-2" asp-action="Detalhe"
+                                        <a class="d-block h6 mb-2" asp-action="Detalhe"
                                             asp-route-id="@produto.Id">@produto.Nome</a>
                                         <span class="text-primary me-1">R$ @produto.ValorAtual.ToString("N2")</span>
                                     </div>
