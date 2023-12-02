@@ -8,74 +8,56 @@
 <h1 class="display-4">Produtos</h1>
 <h4 class="display-6">Excluir</h4>
 <hr />
-
 <h3 class="text-danger">Confirma a exclusão desse Produto?</h3>
 
-<div>
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Descricao)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Descricao)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Lancamento)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Lancamento)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.QtdEstoque)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.QtdEstoque)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ValorAtual)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.ValorAtual)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ValorDesconto)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.ValorDesconto)
-        </dd>
-
-        <dt class="col-sm-12">
-            <div class="col-md-4 col-sm-12 col-xxl-3">
-                <div class="form-group">
-                    <label asp-for="Imagem" class="form-label"></label>
-                    <img id="PreviewImage" src="@Model.Imagem" class="img-fluid w-100">
-                </div>
+<div class="row">
+    <div class="col-md-4 col-sm-12 col-xxl-3">
+        <div class="form-group">
+            <label asp-for="Imagem" class="form-label"></label>
+            <img id="PreviewImage" src='@(Model.Imagem ?? "../../img/sem_foto.png")' class="img-fluid w-100 pointer">
+            <input asp-for="Imagem" class="d-none" />
+        </div>
+    </div>
+    <div class="col-md-8 col-sm-12 col-xxl-9">
+        <div class="form-group mb-3">
+            <label asp-for="Nome" class="control-label"></label>
+            <input asp-for="Nome" class="form-control" disabled/>
+        </div>
+        <div class="form-group mb-3">
+            <label asp-for="Descricao" class="control-label"></label>
+            <textarea asp-for="Descricao" class="form-control" rows="3" disabled></textarea>
+        </div>
+        <div class="row mb-3">
+            <div class="col form-group">
+                <label asp-for="QtdEstoque" class="control-label"></label>
+                <input asp-for="QtdEstoque" class="form-control" disabled/>
             </div>
-        </dt>
-
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Categoria)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Categoria.Nome)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Marca)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Marca.Nome)
-        </dd>
-    </dl>
-
+            <div class="col form-group">
+                <label asp-for="ValorAtual" class="control-label"></label>
+                <input asp-for="ValorAtual" class="form-control" disabled/>
+            </div>
+            <div class="col form-group form-check d-flex align-items-center">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Lancamento" disabled/> @Html.DisplayNameFor(model =>
+                    model.Lancamento)
+                </label>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="form-group col">
+                <label asp-for="CategoriaId" class="control-label"></label>
+                <select asp-for="CategoriaId" class="form-control" asp-items="ViewBag.CategoriaId" disabled></select>
+            </div>
+            <div class="form-group col">
+                <label asp-for="MarcaId" class="control-label"></label>
+                <select asp-for="MarcaId" class="form-control" asp-items="ViewBag.MarcaId" disabled></select>
+            </div>
+        </div>
+    </div>
     <form asp-action="Delete" class="col-12 mt-4">
         <input type="hidden" asp-for="Id" />
         <button type="submit" class="btn btn-danger me-3"><i class="bi bi-trash-fill"></i> Excluir</button>
         <a asp-action="Index" class="btn btn-primary"><i class="bi bi-arrow-left-circle-fill"></i> Voltar a Listagem</a>
     </form>
 </div>
+

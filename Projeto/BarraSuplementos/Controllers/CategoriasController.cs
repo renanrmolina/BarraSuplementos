@@ -14,9 +14,12 @@ namespace BarraSuplementos.Controllers
     {
         private readonly AppDbContext _context;
 
-        public CategoriasController(AppDbContext context)
+        private readonly IWebHostEnvironment _hostEnvironment;
+
+        public CategoriasController(AppDbContext context, IWebHostEnvironment hostEnvironment)
         {
             _context = context;
+            _hostEnvironment = hostEnvironment;
         }
 
         // GET: Categorias
@@ -54,13 +57,27 @@ namespace BarraSuplementos.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Descricao,Destaque,Imagem")] Categoria categoria)
+        public async Task<IActionResult> Create([Bind("Id,Nome,Descricao,Destaque,Imagem")] Categoria categoria, IFormFile formFile)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(categoria);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
+
+                if (formFile != null)
+                {
+                    string wwwRootPath = _hostEnvironment.WebRootPath;
+                    string fileName = categoria.Id.ToString() + Path.GetExtension(formFile.FileName);
+                    string uploads = Path.Combine(wwwRootPath, @"img\categorias");
+                    string newFile = Path.Combine(uploads, fileName);
+                    using (var stream = new FileStream(newFile, FileMode.Create))
+                    {
+                        formFile.CopyTo(stream);
+                    }
+                    categoria.Imagem = "/img/categorias/" + fileName;
+                    await _context.SaveChangesAsync();
+                }
             }
             return View(categoria);
         }
@@ -86,7 +103,7 @@ namespace BarraSuplementos.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Descricao,Destaque,Imagem")] Categoria categoria)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Descricao,Destaque,Imagem")] Categoria categoria, IFormFile formFile)
         {
             if (id != categoria.Id)
             {
@@ -97,6 +114,31 @@ namespace BarraSuplementos.Controllers
             {
                 try
                 {
+
+                    if (formFile != null)
+                    {
+                        string wwwRootPath = _hostEnvironment.WebRootPath;
+
+                        if (categoria.Imagem != null)
+                        {
+                            string oldFile = Path.Combine(wwwRootPath, categoria.Imagem.TrimStart('\\'));
+                            if (System.IO.File.Exists(oldFile))
+                            {
+                                System.IO.File.Delete(oldFile);
+                            }
+                        }
+
+                        string fileName = categoria.Id.ToString() + Path.GetExtension(formFile.FileName);
+                        string uploads = Path.Combine(wwwRootPath, @"img\categorias");
+                        string newFile = Path.Combine(uploads, fileName);
+                        using (var stream = new FileStream(newFile, FileMode.Create))
+                        {
+                            formFile.CopyTo(stream);
+                        }
+                        categoria.Imagem = "/img/categorias/" + fileName;
+                        await _context.SaveChangesAsync();
+                    }
+
                     _context.Update(categoria);
                     await _context.SaveChangesAsync();
                 }
